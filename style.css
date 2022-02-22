@@ -1,0 +1,241 @@
+/* Caracteres acentuados*/
+@charset "UTF-8";
+
+/* ------ Importar Fontes direto do Google Fonts ------ */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Righteous&family=Sarala&display=swap');
+
+
+/* ------ Variáveis CSS ------ */
+:root
+{
+    /* ------ Fontes: ------ */
+    --titulo-txt-h1: 'Righteous', cursive;
+    --paragrafo-txt-p: 'Inter', sans-serif;
+    --paragrafo-unico: 'Sarala', sans-serif;
+    /* ------ Tamanhos: ------ */ 
+    --big-font-tamanho: 2.5rem;
+    --normal-font-tamanho: .938rem;
+    /* ------ Cores: ------ */
+    --cor-font-h1: #FAFAFA;
+    --cor-font-p: #06070E;
+    --cor-fundo: linear-gradient(to right, #74ebd5, #acb6e5);
+    --cor-botton: #AAB8E4;
+}
+
+/* ------ Pré-configurações (Reset CSS) ------ */
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+
+/* ------ código do corpo do Site ------ */
+
+body
+{
+    background-image: var(--cor-fundo);
+    font-size: var(--normal-font-tamanho);
+}
+ul{
+    list-style: none;
+}
+/* ------ código da cabeça do Site ------ */
+.cabecalho
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+
+.cabecalho-imagem
+{
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50px;
+}
+
+#bnt
+{
+    background-color: transparent;
+    border: none;
+    display: none;
+
+}
+/* ------ código da barra de menu ------ */
+.menu-principal
+{
+    display: flex;
+    gap: 36px;
+    
+}
+
+.menu-item
+{
+    font-family: var(--paragrafo-txt-p);
+    font-size: var(--normal-font-tamanho);
+    padding: 10px;
+    transition-duration: .5s;
+}
+
+.menu-item:hover
+{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #FA7B3C;
+}
+/* ------ código do conteúdo principal ------ */
+.conteudo-principal-escrito
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-escrito-div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+#imagem-sorvete
+{
+    display: flex;
+    width: 300px;
+    height: 550px;
+    padding-top: 25px;
+}
+
+.txt-h1
+{
+    font-family: var(--titulo-txt-h1);
+    font-size: 60px;
+    color: var(--cor-font-h1);
+}
+
+.txt-px
+{
+    font-family: var(--paragrafo-unico);
+    font-size: 18px;
+}
+
+.botao
+{
+    background-color: #AAB8E4;
+    color: #06070E;
+    font-size: large;
+    border-radius: 50px;
+    width: 180px;
+    height: 60px;
+    box-shadow: 10px 12px 10px rgba(0, 0, 0, 0.199);
+}
+
+.botao:hover
+{
+    cursor: pointer;
+    background-color: #FA7B3C;
+}
+
+/* ------ código do rodapé da pagina Web ------ */
+
+.icones-redes-sociais
+{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}   
+#bnt:hover
+{
+    cursor: pointer;
+}
+
+#bnt:focus ~ nav.menu-principal
+{
+    height: 250px;
+}
+
+/* ------Media Queries (deixa o site responsivo) ------ */
+
+@media (max-width: 805px) {
+    .cabecalho{
+        flex-direction: column;
+    }
+    .cabecalho-imagem{
+        padding-bottom: 10px;
+    }
+    .icones-redes-sociais{
+         padding-bottom: 15px;
+    }
+    .icones{
+        margin: 10px;
+    }
+    .txt-h1, .txt-px, p.txt-p{
+        padding-left: 12px;
+    }
+}
+
+@media (max-width: 625px) {
+    section.conteudo-principal-escrito{
+        flex-direction: column;
+    }
+    .txt-h1{
+        padding-top: 12px;
+    }
+    .txt-px{
+        padding-top: 12px;
+    }
+    #imagem-sorvete{
+        width: 288px;
+        height: 517px;
+        padding-top: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    a{
+        width: 100%;
+    }
+    nav.menu-principal{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        gap: 12px;
+        background-color: #2732997c;
+    }
+    .menu-item{
+        margin-left: 40%;
+    }
+    div.icones-redes-sociais{
+        position: absolute;
+        left: 8rem;
+    }
+    #imagem-sorvete
+    {
+        padding-top: 12px;
+    }
+
+    #bnt{
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        padding-right: 10px;
+        font-size: 36px;
+    }
+}
