@@ -1,2 +1,2 @@
 # Landing-Page-Typical-IceCream
- Uma simples landing page quase responsiva. (Meu primeiro projeto))
+ Uma simples landing page quase responsiva. (Meu primeiro projeto)
